@@ -1,0 +1,10 @@
+suma([],0).
+suma([C|R],N):-suma(R,N1), N is C+N1.
+
+maximo([C|[]],C).
+maximo([X|[Y|M]],X):-maximo([Y|M],Z),X>=Z.
+maximo([X|M],Z):-maximo(M,Z),Z>X.
+
+elementoEnP([C|R],1,C).
+elementoEnP([C|R],P,E):-P1 is P-1, elementoEnP(R,P1,E1), E is E1.
+
