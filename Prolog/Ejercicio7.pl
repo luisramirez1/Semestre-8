@@ -8,3 +8,8 @@ maximo([X|M],Z):-maximo(M,Z),Z>X.
 elementoEnP([C|R],1,C).
 elementoEnP([C|R],P,E):-P1 is P-1, elementoEnP(R,P1,E1), E is E1.
 
+elemento_par(X,List), posicion(X,List,Pos), divide(Pos,2,C,R), R=:=0.
+
+posicion(X,[X|_],1).
+posicion(X[_|R],Pos) :- posicion(X,R,Pos1), Pos is Pos1 + 1.
+
