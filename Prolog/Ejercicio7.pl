@@ -21,3 +21,4 @@ pEscalar([C|R],[C1|R1],P) :- pEscalar(R,R1,P1), P is C*C1+P1.
 % Union(L1,L2,Lu).
 % Interseccion(L1,L2,I).
 % DiferenciaL1-L2(L1,L2,D)
+% Complemen L1(L1,U,C).
